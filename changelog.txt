@@ -1,3 +1,6 @@
+1.0.1
+- Added more languages to video lang preferred.
+- Fixed a bug error on search empty string.
 1.0.0
 - Fixed some problems with translations strings on degub logs.
 0.0.9

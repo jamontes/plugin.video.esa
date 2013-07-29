@@ -34,11 +34,11 @@ translation = settings.getLocalizedString
 language_id = settings.getSetting("language")
 
 # Language options selected from add-on settings.
-language_list = ('system', 'cz', 'en', 'es', 'fr', 'de', 'gr', 'it', 'pt')
+language_list = ('system', 'cz', 'en', 'es', 'fr', 'de', 'gr', 'it', 'nl', 'pt')
 sort_list = ('published', 'view_count', 'rating', 'votes')
 trans_language =    {'Czech' : 'cz', 'English' : 'en', 'Spanish' : 'es',
                     'French' : 'fr', 'German' : 'de', 'Greek' : 'gr',
-                    'Italian' : 'it', 'Portuguese' : 'pt'}
+                    'Italian' : 'it', 'Dutch' : 'nl', 'Portuguese' : 'pt'}
 
 # Language gets the the proper value from language_list
 try:
@@ -196,7 +196,9 @@ def search(params):
     if search_string:
         params['url'] = 'http://spaceinvideos.esa.int/content/search?SearchText=%s&SearchButton=Go' % lutil.get_url_encoded(search_string)
         lutil.log("esa.search Value of search url: %s" % params['url'])
-        main_list(params)
+        return main_list(params)
+
+    return lutil.close_dir(pluginhandle)
 
 
 # This funtion search into the URL link to get the video link from the different sources.

@@ -1,3 +1,5 @@
+1.0.0
+- Fixed some problems with translations strings on degub logs.
 0.0.9
 - Cosmetics and clean up, ready for bump to Git repo.
 0.0.8

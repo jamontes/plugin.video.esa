@@ -132,8 +132,7 @@ def find_first(text,pattern):
 
 # This function adds a directory entry into the XBMC GUI throught the API
 def addDir(action = "", title = "", url = "", thumbnail = "", reset_cache = "no"):
-    _log("addDir action = [" + action + "] title = [" + title + "] url = [" + url + "] thumbnail = [" + thumbnail + "] reset_cache = [" + reset_cache + "]")
-    #_log("addDir action = [" + action + "] title = [" + title + "] url = [" + url + "] thumbnail = [" + thumbnail + "]")
+    _log('addDir action = "%s" url = "%s" thumbnail = "%s" reset_cache = "%s"' % (action, url, thumbnail, reset_cache))
 
     dir_url = '%s?action=%s&reset_cache=%s&url=%s' % (sys.argv[0], action, reset_cache, urllib.quote_plus(url))
     dir_item = xbmcgui.ListItem(title, iconImage = "DefaultFolder.png", thumbnailImage = thumbnail)
@@ -143,7 +142,7 @@ def addDir(action = "", title = "", url = "", thumbnail = "", reset_cache = "no"
 
 # This function adds a video link entry into the XBMC GUI throught the API
 def addLink(action = "", title = "", plot = "", url = "", thumbnail = ""):
-    _log("addDir action = [" + action + "] title = [" + title + "] plot = [" + plot + "] url = [" + url + "] thumbnail = [" + thumbnail + "]")
+    _log("addLink action = [" + action + "] title = [" + title + "] plot = [" + plot + "] url = [" + url + "] thumbnail = [" + thumbnail + "]")
 
     link_url = '%s?action=%s&url=%s' % (sys.argv[0], action, urllib.quote_plus(url))
     link_item = xbmcgui.ListItem(title, iconImage = "DefaultVideo.png", thumbnailImage = thumbnail)

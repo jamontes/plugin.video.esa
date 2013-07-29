@@ -90,7 +90,7 @@ def create_index(params):
     # All Videos entry
     url = 'http://spaceinvideos.esa.int/content/search?SearchText=&result_type=videos_online&sortBy=%s' % sort_method
     title = translation(30107)
-    lutil.log('esa.create_index action=["%s"] title=["%s"] url=["%s"]' % (action, title, url))
+    lutil.log('esa.create_index action=["%s"] title=["All the Videos"] url=["%s"]' % (action, url))
     lutil.addDir(action=action, title=title, url=url)
 
     # Euronews
@@ -109,7 +109,7 @@ def create_index(params):
     action = 'search'
     url   = ''
     title = translation(30104)
-    lutil.log('esa.create_index action=["%s"] title=["%s"] url=["%s"]' % (action, title, url))
+    lutil.log('esa.create_index action=["%s"] title=["Search"] url=["%s"]' % (action, url))
     lutil.addDir(action=action, title=title, url=url)
 
     lutil.close_dir(pluginhandle, updateListing=False)

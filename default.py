@@ -105,6 +105,12 @@ def create_index(params):
     lutil.log('esa.create_index action=["%s"] title=["%s"] url=["%s"]' % (action, title, url))
     lutil.addDir(action=action, title=title, url=url)
 
+    # Science@ESA
+    url   = 'http://spaceinvideos.esa.int/content/search?SearchText=%22Science@ESA%3A%22&SearchButton=Go'
+    title = 'Science@ESA'
+    lutil.log('esa.create_index action=["%s"] title=["%s"] url=["%s"]' % (action, title, url))
+    lutil.addDir(action=action, title=title, url=url)
+
     # Search
     action = 'search'
     url   = ''

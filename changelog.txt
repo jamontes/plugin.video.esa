@@ -1,3 +1,5 @@
+1.0.2
+- Added Science@ESA menu entry.
 1.0.1
 - Added more languages to video lang preferred.
 - Fixed a bug error on search empty string.

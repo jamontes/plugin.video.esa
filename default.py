@@ -138,11 +138,10 @@ def other_categories(params):
     category_pattern = '<a href="(/Directorates/[^"]*?)" title="[^"]*?">([^<]*?)</a>'
 
     for category_link, title in lutil.find_multiple(buffer_web, category_pattern):
-        url = '%s%s' % (root_url, category_link)
+        url = '%s%s/(sortBy)/%s' % (root_url, category_link, sort_method)
         title = title.replace('&quot;', '"').replace('&#039;', '´').replace('&amp;', '&')  # Cleanup the title.
         lutil.log('esa.other_categories action=["%s"] title=["%s"] url=["%s"]' % (action, title, url))
         lutil.addDir(action=action, title=title, url=url)
-        #lutil.addDir(action=action, title=title, url=url, reset_cache="yes")
 
     lutil.close_dir(pluginhandle, updateListing=False)
 
@@ -223,7 +222,7 @@ def main_list(params):
 def search(params):
     search_string = lutil.get_keyboard_text(translation(30105))
     if search_string:
-        params['url'] = 'http://spaceinvideos.esa.int/content/search?SearchText=%s&SearchButton=Go' % lutil.get_url_encoded(search_string)
+        params['url'] = 'http://spaceinvideos.esa.int/content/search?SearchText=%s&SearchButton=Go&sortBy=%s' % (lutil.get_url_encoded(search_string), sort_method)
         lutil.log("esa.search Value of search url: %s" % params['url'])
         return main_list(params)
 

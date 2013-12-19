@@ -28,6 +28,6 @@
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <forum>http://forum.xbmc.org/showthread.php?tid=170058</forum>
         <source>https://github.com/jamontes/plugin.video.esa</source>
-        <web>http://www.esa.int/ESA</web>
+        <website>http://www.esa.int/ESA</website>
     </extension>
 </addon>

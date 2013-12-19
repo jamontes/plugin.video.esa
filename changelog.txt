@@ -1,6 +1,6 @@
 1.0.5
 - Fixed some international string tags.
-- Added web tag to addon.cml file.
+- Added web tag to addon.xml file.
 1.0.4
 - Quick fix due to website internal change.
 1.0.3

@@ -1,3 +1,5 @@
+1.0.9
+- Quick fix due to website internal changes.
 1.0.8
 - Quick fix for Other Categories due to website internal change.
 1.0.7

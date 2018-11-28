@@ -23,6 +23,7 @@
    This plugin depends on the lutil library functions.
 '''
 
+import re
 import lutil
 
 pluginhandle = int(sys.argv[1])
@@ -245,25 +246,11 @@ def play_video(params):
     lutil.log("esa.play "+repr(params))
 
     buffer_link = lutil.carga_web(params.get("url"))
-    if language != 'en':
-        pattern_lang = '<a href="([^\(]*?\(lang\)/%s)"' % language
-        video_link = lutil.find_first(buffer_link, pattern_lang)
-        if video_link:
-            lang_url = '%s%s' % (root_url, video_link)
-            lutil.log("esa.play: We have found this alt video URL for '%s' language: '%s'" % (language, lang_url))
-            buffer_link = lutil.carga_web(lang_url)
 
-    pattern_video = "file[']?: '(http[^']*?)'"
-    video_url = lutil.find_first(buffer_link, pattern_video)
-    if video_url:
-        try:
-            lutil.log("esa.play: We have found this video: '%s' and let's going to play it!" % video_url)
-            return lutil.play_resolved_url(pluginhandle = pluginhandle, url = video_url)
-        except:
-            lutil.log('esa.play ERROR: we cannot reproduce this video URL: "%s"' % video_url)
-            return lutil.showWarning(translation(30012))
+    video_id = re.compile(r'//www\.youtube\.com/embed/([^\"\?]+)', re.MULTILINE).search( buffer_link ).group(1)
+    xbmc.executebuiltin('PlayMedia(plugin://plugin.video.youtube/play/?video_id=' + video_id + ')')
 
-    lutil.log('esa.play ERROR: we cannot play the video from this source yet: "%s"' % params.get("url"))
-    return lutil.showWarning(translation(30011))
+    lutil.close_dir(pluginhandle, updateListing=False)
+
 
 run()

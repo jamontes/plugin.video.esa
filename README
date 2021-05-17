@@ -1,4 +1,4 @@
-ESA Videos: XBMC video plugin to watch the ESA videos from the ESA web site.
+ESA Videos: KODI video plugin to watch the ESA videos from the ESA web site.
 
    Copyright (C) 2013 Jose Antonio Montes (jamontes)
 
@@ -18,7 +18,7 @@ ESA Videos: XBMC video plugin to watch the ESA videos from the ESA web site.
 
 Initial release 1.0.0
 
-This XBMC plugin allows to watch the videos from the ESA web site (more than 1500 videos available).
+This KODI plugin allows to watch the videos from the ESA web site (more than 1500 videos available).
 
 The European Space Agency (ESA) is Europe’s gateway to space. Its mission is to shape the development of Europe’s space capability and ensure that investment in space continues to deliver benefits to the citizens of Europe and the world.
 
@@ -29,7 +29,7 @@ ESA’s job is to draw up the European space programme and carry it through. ESA
 Through the Add-on settings you can configure the language preferred to watch the videos if it is available.
 You can configure as well the order criteria to list the videos (by date, views, votes, and rating).
 
-To install it simply download the zip file, and then proceed as with any other plugin from XBMC:
+To install it simply download the zip file, and then proceed as with any other plugin from KODI:
  System->Settings->Add-ons->Install from zip file.
 
 Any issues detected can be reported using this forum thread for official support: http://forum.xbmc.org/showthread.php?tid=170058

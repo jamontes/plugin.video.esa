@@ -1,3 +1,5 @@
+1.3.0+matrix.1 (2021.05.17)
+- Code updated for matrix onwards.
 1.1.3 (2020.08.30)
 - Quick fix due to website change.
 1.1.2 (2019.11.03)
@@ -6,7 +8,7 @@
 - Quick fix to play newer videos (thanks to idleloop-github).
 - Migrate deprecated language files from xml to po format.
 1.1.0
-- Quick fix to recover preferred language support on videos.  
+- Quick fix to recover preferred language support on videos.
 1.0.9
 - Quick fix due to website internal changes.
 1.0.8
@@ -19,7 +21,7 @@
 - Fixes made due to website internal changes.
 - Improved the scraper to add info tags to the videos.
 - Changed icon image.
-- Added "Show thumbnails as fanart" feature into settings menu. 
+- Added "Show thumbnails as fanart" feature into settings menu.
 1.0.5
 - Fixed some international string tags.
 - Added web tag to addon.xml file.
